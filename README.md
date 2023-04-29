@@ -8,11 +8,11 @@ Springboarded from [The Primeagen's video] (https://www.youtube.com/watch?v=w7i4
 - clone -> copy contents to `~/.config/nvim`
 - clone [packer](https://github.com/wbthomason/packer.nvim)
 - source Packer (while wading through the errors):
-    - `vim lua/clark/packer.lua`
-    - `:so`
-    - `:PackerSync`
+    - `vim lua/clark/packer.lua`
+    - `:so`
+    - `:PackerSync`
 - to restore colors: `:lua ColorsReset()`
-- when any file doesn't run, `:TSInstall <language_treesitter>` or `:Mason` + search
+- when any file doesn't run, `:TSInstall <language_treesitter>` or `:Mason` + search (`i` to install)
 
 Should be golden!
  
