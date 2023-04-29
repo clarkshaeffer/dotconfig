@@ -5,7 +5,7 @@ Springboarded from [The Primeagen's video] (https://www.youtube.com/watch?v=w7i4
 ---
  
 #### Install
-- clone -> copy contents to `~/.config`
+- clone -> copy contents to `~/.config/nvim`
 - clone [packer](https://github.com/wbthomason/packer.nvim):
 ```bash
 git clone --depth 2 https://github.com/wbthomason/packer.nvim\ (https://github.com/wbthomason/packer.nvim%5C)
