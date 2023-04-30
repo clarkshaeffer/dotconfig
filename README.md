@@ -5,6 +5,11 @@ Springboarded from [The Primeagen's video] (https://www.youtube.com/watch?v=w7i4
 ---
  
 #### Install
+- reset `nvim` if needed: 
+```bash
+rm -rf ~/.config/nvim
+rm -rf ~/.local/share/nvim
+```
 - clone -> copy contents to `~/.config/nvim`
 - clone [packer](https://github.com/wbthomason/packer.nvim)
 - source Packer (while wading through the errors):
