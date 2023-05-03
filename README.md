@@ -1,6 +1,6 @@
 ## My NVIM Configs
 My personal, replicable Neovim setup.
-Springboarded from [The Primeagen's video] (https://www.youtube.com/watch?v=w7i4amO_zaE&t=61s)
+Springboarded from [The Primeagen's video](https://www.youtube.com/watch?v=w7i4amO_zaE&t=61s)
  
 ---
  
@@ -10,6 +10,7 @@ Springboarded from [The Primeagen's video] (https://www.youtube.com/watch?v=w7i4
 rm -rf ~/.config/nvim
 rm -rf ~/.local/share/nvim
 ```
+- get [ripgrep](https://github.com/BurntSushi/ripgrep)
 - clone -> copy contents to `~/.config/nvim`
 - clone [packer](https://github.com/wbthomason/packer.nvim)
 - source Packer (while wading through the errors):
