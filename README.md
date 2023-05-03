@@ -1,9 +1,11 @@
 ## My NVIM Configs
-My personal, replicable Neovim setup.
-Springboarded from [The Primeagen's video](https://www.youtube.com/watch?v=w7i4amO_zaE&t=61s)
- 
+
+My personal, replicable Neovim setup. 
+
+Springboarded from [The Primeagen's video](https://www.youtube.com/watch?v=w7i4amO_zaE&t=61s)   
+
 ---
- 
+
 #### Install
 - reset `nvim` if needed: 
 ```bash
