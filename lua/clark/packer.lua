@@ -70,8 +70,10 @@ return require('packer').startup(function(use)
 		end
 	})
 
+    -- text formatting
     use('preservim/vim-pencil')
 
+    -- bracket completion
+    use('rstacruz/vim-closer')
 
-
-end) 
+end)
