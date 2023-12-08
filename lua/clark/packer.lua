@@ -58,7 +58,6 @@ return require('packer').startup(function(use)
 		  }
 	  }
 
-
 	-- surround
 	use({
 		"kylechui/nvim-surround",
