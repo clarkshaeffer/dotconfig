@@ -38,3 +38,4 @@ Should be golden!
 - [lsp-zero](github.com/'VonHeikemen/lsp-zero.nvim')
 - [nvim-surround](github.com/kylechui/nvim-surround)
 - [vim-pencil](github.com/preservim/vim-pencil)
+- [vim-closer](github.com/rstacruz/vim-closer)
