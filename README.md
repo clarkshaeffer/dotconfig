@@ -22,10 +22,17 @@ rm -rf ~/.local/share/nvim
 - to restore colors: `:lua ColorsReset()`
 - when any file doesn't run, `:TSInstall <language_treesitter>` or `:Mason` + search (`i` to install)
 
-Should be golden!
- 
+
+Should be golden!   
+
+--- 
+
+###### Assorted notes
+For Python third-party package LSP support:
+In `~/.local/share/nvim/mason/packages/python-lsp-server/venv/pyenv.cfg`, set `include-system-site-packages` to `true`.
+
 ---
- 
+
 #### Plugins used
 - [packer](github.com/wbthomason/packer.nvim)
 - [treesitter](github.com/nvim-treesitter/nvim-treesitter)
