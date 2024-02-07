@@ -11,6 +11,7 @@ Springboarded from [The Primeagen's video](https://www.youtube.com/watch?v=w7i4a
 ```bash
 rm -rf ~/.config/nvim/*
 rm -rf ~/.local/share/nvim
+rm -rf ~/.local/state/nvim
 ```
 - get [ripgrep](https://github.com/BurntSushi/ripgrep)
 - clone -> copy contents to `~/.config/nvim`
