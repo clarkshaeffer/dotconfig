@@ -4,7 +4,6 @@
 if [ $# -eq 0 ]; then
     echo "need int fps arg"
 else
-    # If argument provided, echo the argument
-    echo "$1"
+    # replace 'fps = <digit>,' with 'fps = $1' in animations
     sed -i "s/\(fps = \)\(.*\)/\1$1,/" $(grep -rl "fps = " /root/.local/share/nvim/lazy/cellular-automaton.nvim/lua/cellular-automaton/animations)
 fi
