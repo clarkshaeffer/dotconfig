@@ -21,7 +21,7 @@ RUN touch .profile
 RUN echo 'alias lazy="nvim /root/.config/nvim/lua/clark/lazy.lua"' >> .profile
 RUN echo 'alias vim="nvim"' >> .profile
 RUN echo 'alias :q="exit"' >> .profile
-RUN echo 'alias cellfps="/root/cellularfps.sh"' >> .profile
+RUN echo 'alias cellfps="/root/.sh/cellularfps.sh"' >> .profile
 
 # source .profile aliases
 ENV ENV="/root/.profile"
