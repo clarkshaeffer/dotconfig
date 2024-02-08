@@ -1,3 +1,3 @@
 require("clark.set")
 require("clark.remap")
-require("clark.packer")
+require("clark.lazy")

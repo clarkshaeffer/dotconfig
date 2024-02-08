@@ -1,19 +1,29 @@
 FROM alpine:latest
+
+# install dependency libraries
 RUN apk update && apk upgrade && \
     apk add curl git ripgrep neovim openjdk11 build-base python3 nodejs npm
+
+# start in ~
 WORKDIR /root
 
-RUN git clone --depth 1 https://github.com/wbthomason/packer.nvim /root/.local/share/nvim/site/pack/packer/start/packer.nvim
+# get source
 RUN git clone https://github.com/clarkshaeffer/dotconfig.git
 
+# copy and hide source
 RUN mkdir -p .config/nvim && cp -r dotconfig/* .config/nvim
 RUN mv dotconfig .dotconfig
 
+# create sh aliases in .profile
 RUN touch .profile
-RUN echo 'alias packer="nvim /root/.config/nvim/lua/clark/packer.lua"' >> .profile
+RUN echo 'alias lazy="nvim /root/.config/nvim/lua/clark/lazy.lua"' >> .profile
 RUN echo 'alias vim="nvim"' >> .profile
 RUN echo 'alias :q="exit"' >> .profile
 
+# source .profile aliases
 ENV ENV="/root/.profile"
 
+# open shell, no `run` commands needed
 CMD [ "sh" ]
+
+# `run` parameters: `-it` for interactive
