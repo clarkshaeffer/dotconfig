@@ -2,7 +2,8 @@
 
 My personal, replicable Neovim setup. 
 
-Springboarded from [The Primeagen's video](https://www.youtube.com/watch?v=w7i4amO_zaE&t=61s)   
+Springboarded from [The Primeagen's video](https://www.youtube.com/watch?v=w7i4amO_zaE&t=61s)
+Refactored using [lazy.nvim](https://github.com/folke/lazy.nvim)
 
 ---
 
@@ -15,22 +16,22 @@ rm -rf ~/.local/state/nvim
 ```
 - get [ripgrep](https://github.com/BurntSushi/ripgrep)
 - clone -> copy contents to `~/.config/nvim`
-- clone [packer](https://github.com/wbthomason/packer.nvim)
-- source Packer (while wading through the errors):
-    - `vim lua/clark/packer.lua`
-    - `:so`
-    - `:PackerSync`
-- to restore colors: `:lua ColorsReset()`
-- when any file doesn't run, `:TSInstall <language_treesitter>` or `:Mason` + search (`i` to install)
 
+and then:
+```
+nvim
+```
+Just like that!
 
-Should be golden!   
 
 --- 
 
 ###### Assorted notes
-For Python third-party package LSP support:
-In `~/.local/share/nvim/mason/packages/python-lsp-server/venv/pyenv.cfg`, set `include-system-site-packages` to `true`.
+- For Python third-party package LSP support:
+    - In `~/.local/share/nvim/mason/packages/python-lsp-server/venv/pyenv.cfg`, set `include-system-site-packages` to `true`.
+- When LSP/highlighters not auto-installed, `:TSInstall <language_treesitter>` or `:Mason` + search (`i` to install)
+
+See Dockerfile
 
 ---
 
@@ -46,4 +47,4 @@ In `~/.local/share/nvim/mason/packages/python-lsp-server/venv/pyenv.cfg`, set `i
 - [lsp-zero](https://github.com/'VonHeikemen/lsp-zero.nvim')
 - [nvim-surround](https://github.com/kylechui/nvim-surround)
 - [vim-pencil](https://github.com/preservim/vim-pencil)
-- [vim-closer](https://github.com/rstacruz/vim-closer)
+:x

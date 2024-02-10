@@ -33,7 +33,14 @@ require("lazy").setup({
 	{'L3MON4D3/LuaSnip'},
 
     -- surround
-    { "kylechui/nvim-surround", version = "*", event = "VeryLazy", },
+    {
+        "kylechui/nvim-surround",
+        version = "*",
+        -- event = "VeryLazy",
+        config = function()
+            require("nvim-surround").setup({})
+        end
+    },
 
     -- bracket completion
     -- {'rstacruz/vim-closer'},
