@@ -58,4 +58,4 @@ vim.keymap.set("n", "<leader>no", "<cmd>CellularAutomaton make_it_rain<CR>");
 
 -- windows
 -- 4 windows (Typescript API dev)
-vim.api.nvim_create_user_command('Wints', 'norm <C-w>v<C-w>s<C-w>30><C-w>15+<C-w>l<C-w>s<C-w>12+<C-w>h', {})
+vim.api.nvim_create_user_command('Wints', 'norm <C-w>v<C-w>s<C-w>j<C-w>30><C-w>15-:term<CR><Esc><C-w>l<C-w>s<C-w>j<C-w>12-:term<CR><Esc><C-w>k<C-w>h', {})
