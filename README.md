@@ -59,3 +59,9 @@ ignore = E302, E303, W391, E501, E704
 
 #### TODO
 - `markdown-preview.nvim` on container: `bash` -> `npm`. Alpine doesn't have `bash`.
+
+#### Docker
+```
+docker build -t alpine-nvim .
+docker run -it alpine-nvim
+```
