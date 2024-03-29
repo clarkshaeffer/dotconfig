@@ -40,6 +40,7 @@ ignore = E302, E303, W391, E501, E704
 ---
 
 #### Plugins Used
+###### Neovim:
 - [lazy.nvim](https://github.com/folke/lazy.nvim)
 - [telescope](https://github.com/nvim-telescope/telescope.nvim)
 - [tokyonight (colorscheme)](https://github.com/folke/tokyonight.nvim)
@@ -57,11 +58,21 @@ ignore = E302, E303, W391, E501, E704
 
 ---
 
-#### TODO
-- `markdown-preview.nvim` on container: `bash` -> `npm`. Alpine doesn't have `bash`.
-
 #### Docker
 ```
 docker build -t alpine-nvim .
 docker run -it alpine-nvim
 ```
+
+---
+
+#### TODO
+- `.zshrc`
+- `pycodestyle`
+- Alpine Dockerfile:
+    - tmux config cp to `~/.tmux.conf`
+    - `markdown-preview.nvim` `bash` -> `npm`. Alpine doesn't have `bash`.
+    - `.zshrc` to `.profile`, remove `alias >>` stuff
+    - `pycodestyle`
+    - Is there a way to open `nvim` automatically??
+
