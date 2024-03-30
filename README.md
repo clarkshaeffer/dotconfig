@@ -67,8 +67,11 @@ docker run -it alpine-nvim
 ---
 
 #### TODO
-- `.zshrc`
 - `pycodestyle`
+- automated init `.sh`:
+    - copy `nvim` to `~/.config`
+    - `.*rc` (depending on shell)
+    - `~/.tmux.conf`
 - Alpine Dockerfile:
     - tmux config cp to `~/.tmux.conf`
     - `markdown-preview.nvim` `bash` -> `npm`. Alpine doesn't have `bash`.
