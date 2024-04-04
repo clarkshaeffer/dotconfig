@@ -15,7 +15,8 @@ rm -rf ~/.config/nvim/*
 rm -rf ~/.local/share/nvim
 rm -rf ~/.local/state/nvim
 ```
-- get [ripgrep](https://github.com/BurntSushi/ripgrep)
+- get [`ripgrep`](https://github.com/BurntSushi/ripgrep)
+    - (used for `telescope` grep search)
 - clone -> copy contents to `~/.config/nvim`
 
 and then:
@@ -54,12 +55,13 @@ ignore = E302, E303, W391, E501, E704
 - [vim-pencil](https://github.com/preservim/vim-pencil)
 - [markdown-preview.nvim](https://github.com/williamboman/mason.nvim)
 - [comment.nvim](https://github.com/numToStr/Comment.nvim)
-- [cellular-automaton](https://github.com/williamboman/mason.nvim)
+- [cellular-automaton](https://github.com/williamboman/mason.nvim) (for fun)
 
 ---
 
 #### Docker
-```
+```bash
+# if on linux, make sure to install `docker-buildx`.
 docker build -t alpine-nvim .
 docker run -it alpine-nvim
 ```
@@ -67,7 +69,9 @@ docker run -it alpine-nvim
 ---
 
 #### TODO
-- `pycodestyle`
+- list package dependencies after nvim 'plugins used'
+    - i.e. `python3`, `nodejs`, `npm`, etc.
+- include `pycodestyle`
 - automated init `.sh`:
     - copy `nvim` to `~/.config`
     - `.*rc` (depending on shell)
@@ -75,7 +79,7 @@ docker run -it alpine-nvim
 - Alpine Dockerfile:
     - tmux config cp to `~/.tmux.conf`
     - `markdown-preview.nvim` `bash` -> `npm`. Alpine doesn't have `bash`.
-    - `.zshrc` to `.profile`, remove `alias >>` stuff
+    - `.zshrc` to `.profile`, remove `alias ... >>` stuff
     - `pycodestyle`
     - Is there a way to open `nvim` automatically??
 
