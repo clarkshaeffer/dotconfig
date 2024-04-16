@@ -43,7 +43,7 @@ require("lazy").setup({
     },
 
     -- bracket completion
-    -- {'rstacruz/vim-closer'},
+    {'rstacruz/vim-closer'},
 
     -- pencil
     {'preservim/vim-pencil'},
