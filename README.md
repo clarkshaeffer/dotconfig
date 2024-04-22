@@ -15,8 +15,9 @@ rm -rf ~/.config/nvim/*
 rm -rf ~/.local/share/nvim
 rm -rf ~/.local/state/nvim
 ```
-- get [`ripgrep`](https://github.com/BurntSushi/ripgrep)
-    - (used for `telescope` grep search)
+- get:
+    - [`ripgrep`](https://github.com/BurntSushi/ripgrep) (used for `telescope` grep search)
+    - [`tpm`](https://github.com/tmux-plugins/tpm)
 - clone -> copy contents to `~/.config/nvim`
 
 and then:
@@ -71,14 +72,16 @@ docker run -it alpine-nvim
 #### TODO
 - list package dependencies after nvim 'plugins used'
     - i.e. `python3`, `nodejs`, `npm`, etc.
-- include `pycodestyle`
+    - chore: update `nvim` plugins used
 - automated init `.sh`:
     - copy `nvim` to `~/.config` (without `.git/`)
     - `.*rc` (depending on shell)
-    - `~/.tmux.conf`
+    - `~/.tmux.conf` + `tpm`
     - `pycodestyle`
 - Alpine Dockerfile:
-    - tmux config cp to `~/.tmux.conf`
+    - tmux:
+        - config cp to `~/.tmux.conf`
+        - `gcl git@github.com:tmux-plugins/tpm.git ~/.tmux/plugins/tpm`
     - `markdown-preview.nvim` `bash` -> `npm`. Alpine doesn't have `bash`.
     - `.zshrc` to `.profile`, remove `alias ... >>` stuff
     - `pycodestyle`
