@@ -7,9 +7,5 @@ alias :q="exit"
 alias :x="exit"
 alias dockerprune="docker container prune -f && docker image prune -f --all && docker volume prune -f"
 alias gcmm="gcm && ggl && gfa && gbdlocal"
-alias ao="ls"
 alias psqldev="psql -h localhost -p 5432 -U test_user -d test_db"
-alias t="tmux new"
 alias tm="tmux new -n"
-
-# neofetch
