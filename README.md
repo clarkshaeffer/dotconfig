@@ -33,11 +33,6 @@ Just like that!
 Python:
 - Third-party package LSP support:
     - In `~/.local/share/nvim/mason/packages/python-lsp-server/venv/pyenv.cfg`, set `include-system-site-packages` to `true`.
-- LSP warnings: boilerplate `~/.config/pycodestyle`:
-```
-[pycodestyle]
-ignore = E302, E303, W391, E501, E704
-```
 
 ---
 
@@ -45,7 +40,7 @@ ignore = E302, E303, W391, E501, E704
 ###### Neovim:
 - [lazy.nvim](https://github.com/folke/lazy.nvim)
 - [telescope](https://github.com/nvim-telescope/telescope.nvim)
-- [tokyonight (colorscheme)](https://github.com/folke/tokyonight.nvim)
+- [tokyonight](https://github.com/folke/tokyonight.nvim) (colorscheme)
 - [treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [harpoon](https://github.com/theprimeagen/harpoon)
 - [undotree](https://github.com/mbbill/undotree)
@@ -54,9 +49,9 @@ ignore = E302, E303, W391, E501, E704
     - [mason](https://github.com/williamboman/mason.nvim)
 - [nvim-surround](https://github.com/kylechui/nvim-surround)
 - [vim-pencil](https://github.com/preservim/vim-pencil)
-- [markdown-preview.nvim](https://github.com/williamboman/mason.nvim)
+- [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim)
 - [comment.nvim](https://github.com/numToStr/Comment.nvim)
-- [cellular-automaton](https://github.com/williamboman/mason.nvim) (for fun)
+- [cellular-automaton](https://github.com/Eandrju/cellular-automaton.nvim) (for fun)
 
 ---
 
@@ -78,6 +73,8 @@ docker run -it alpine-nvim
     - `.*rc` (depending on shell)
     - `~/.tmux.conf` + `tpm`
     - `pycodestyle`
+    - Python Third-party package LSP support:
+        - `~/.local/share/nvim/mason/packages/python-lsp-server/venv/pyenv.cfg`, set `include-system-site-packages` to `true`.
 - Alpine Dockerfile:
     - tmux:
         - config cp to `~/.tmux.conf`
