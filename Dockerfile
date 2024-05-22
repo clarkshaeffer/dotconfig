@@ -2,7 +2,11 @@ FROM alpine:latest
 
 # install dependency libraries
 RUN apk update && apk upgrade && \
-    apk add curl git ripgrep neovim openjdk11 build-base python3 nodejs npm
+    apk add curl git ripgrep neovim tmux \
+    build-base python3 nodejs npm
+
+# other packages:
+# openjdk11
 
 # start in ~
 WORKDIR /root
