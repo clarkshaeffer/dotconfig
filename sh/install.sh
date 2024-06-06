@@ -13,13 +13,11 @@ cp -r . ~/.config/nvim
 # pycodestyle
 cp ./pycodestyle ~/.config
 
-
 # ohmyzsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 #
-# aliases
+# append aliases
 echo ./sh/rc.sh >> ~/.zshrc
-
 
 # tmux.config
 # mkdir -p ~/.tmux/plugins/tpm
@@ -30,9 +28,8 @@ cp ./sh/tmux.conf ~/.tmux.conf
 # python lsp support (must be after nvim starts and mason auto-configs)
 # `~/.local/share/nvim/mason/packages/python-lsp-server/venv/pyenv.cfg`, set `include-system-site-packages` to `true`.
 
-# apply tmux + .zshrc
-# exec zsh
+# apply .zshrc
+source ~/.zshrc
 #
-# end: open nvim
-# nvim
+# open nvim
 vim

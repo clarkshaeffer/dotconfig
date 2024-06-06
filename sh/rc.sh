@@ -9,4 +9,4 @@ alias dockerprune="docker container prune -f && docker image prune -f --all && d
 alias dockerls="~/.config/nvim/sh/dockerls.sh"
 alias gcmm="gcm && ggl && gfa && gbdlocal"
 alias psqldev="psql -h localhost -p 5432 -U test_user -d test_db"
-alias tm="tmux new -n"
+# alias tm="tmux new -n"
