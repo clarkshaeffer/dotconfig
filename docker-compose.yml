@@ -1,0 +1,7 @@
+services:
+  dev:
+    build: .
+    volumes: 
+      - '.:/root/dev'
+    stdin_open: true # same as run -i
+    tty: true # same as run -t

@@ -27,6 +27,8 @@ RUN echo 'alias vim="nvim"' >> .profile
 RUN echo 'alias :q="exit"' >> .profile
 RUN echo 'alias cellfps="sh /root/.sh/cellularfps.sh"' >> .profile
 
+RUN mkdir /root/dev
+
 # source .profile aliases
 ENV ENV="/root/.profile"
 
