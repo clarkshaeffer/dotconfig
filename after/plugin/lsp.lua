@@ -22,6 +22,7 @@ require('mason-lspconfig').setup({
 	  'eslint',
 	  'pylsp',
 	  'lua_ls',
+	  'rust_analyzer',
   },
   handlers = {
     lsp_zero.default_setup,

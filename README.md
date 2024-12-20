@@ -62,6 +62,11 @@ docker build -t alpine-nvim .
 docker run -it alpine-nvim
 ```
 
+if on aarch64, install `lua-language-server` with [this command](https://github.com/williamboman/mason.nvim/discussions/1406):
+```
+:MasonInstall --target linux_arm64_gnu lua-language-server
+```
+
 ---
 
 #### TODO

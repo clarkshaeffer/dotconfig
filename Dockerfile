@@ -27,6 +27,10 @@ RUN echo 'alias vim="nvim"' >> .profile
 RUN echo 'alias :q="exit"' >> .profile
 RUN echo 'alias cellfps="sh /root/.sh/cellularfps.sh"' >> .profile
 
+# Rust
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+ENV PATH="/root/.cargo/bin:${PATH}"
+
 RUN mkdir /root/dev
 
 # source .profile aliases
