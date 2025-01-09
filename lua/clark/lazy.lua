@@ -8,11 +8,17 @@ require("lazy").setup({
 		lazy = false,
 		priority = 1000,
 		opts = {},
-		config = function()
-			-- load the colorscheme
-			vim.cmd([[colorscheme tokyonight-night]])
-		end,
+		-- config = function()
+		-- 	vim.cmd([[colorscheme tokyonight-night]])
+		-- end,
 	},
+    {
+        "rose-pine/neovim",
+        name = "rose-pine",
+        -- config = function()
+        --     vim.cmd([[colorscheme rose-pine]])
+        -- end,
+    },
 	{'nvim-treesitter/nvim-treesitter', cmd = 'TSUpdate'},
 	{
 		"ThePrimeagen/harpoon",
@@ -60,16 +66,14 @@ require("lazy").setup({
     },
 
 
-    -- comments
+    -- Comments
     { 'numToStr/Comment.nvim', opts = {}, lazy = false, },
 
 
     -- Animation
-    
-    -- CellularAutomaton
+
     { 'eandrju/cellular-automaton.nvim' },
 
-    -- LetItSnow
     {
         "marcussimonsen/let-it-snow.nvim",
         cmd = "LetItSnow", -- Wait with loading until command is run
