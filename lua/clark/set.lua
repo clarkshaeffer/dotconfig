@@ -39,3 +39,4 @@ vim.opt.updatetime = 50
 
 vim.opt.conceallevel = 1
 
+vim.diagnostic.config({ virtual_text = true })

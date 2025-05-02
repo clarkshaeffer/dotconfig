@@ -29,20 +29,17 @@ require("lazy").setup({
 	{'mbbill/undotree'},
 	{'tpope/vim-fugitive'},
 
-	-- lsp-zero
+	-- lsp
 	{'williamboman/mason.nvim'},
 	{'williamboman/mason-lspconfig.nvim'},
-	{'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
 	{'neovim/nvim-lspconfig'},
 	{'hrsh7th/cmp-nvim-lsp'},
 	{'hrsh7th/nvim-cmp'},
-	{'L3MON4D3/LuaSnip'},
 
     -- surround
     {
         "kylechui/nvim-surround",
         version = "*",
-        -- event = "VeryLazy",
         config = function()
             require("nvim-surround").setup({})
         end
@@ -65,15 +62,11 @@ require("lazy").setup({
       ft = { "markdown" },
     },
 
-
     -- Comments
     { 'numToStr/Comment.nvim', opts = {}, lazy = false, },
 
-
     -- Animation
-
     { 'eandrju/cellular-automaton.nvim' },
-
     {
         "marcussimonsen/let-it-snow.nvim",
         cmd = "LetItSnow", -- Wait with loading until command is run
