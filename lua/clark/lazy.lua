@@ -93,46 +93,19 @@ require("lazy").setup({
 
     -- Obsidian
     {
-        "epwalsh/obsidian.nvim",
-        version = "*",
-        lazy = true,
+        "obsidian-nvim/obsidian.nvim",
+        version = "*", -- recommended, use latest release instead of latest commit
         ft = "markdown",
-        dependencies = {
-            "nvim-lua/plenary.nvim",
-        },
+        ---@module 'obsidian'
+        ---@type obsidian.config
         opts = {
-            -- workspaces = {
-            --     {
-            --         name = "personal",
-            --         path = "path/to/dir",
-            --     },
-            -- },
-            note_frontmatter_func = function(note)
-                -- Add the title of the note as an alias.
-                if note.title then
-                    note:add_alias(note.title)
-                end
-
-                local out = {
-                    title = note.title,
-                    aliases = note.aliases,
-                    tags = note.tags,
-                }
-
-                -- `note.metadata` contains any manually added fields in the frontmatter.
-                if note.metadata ~= nil and not vim.tbl_isempty(note.metadata) then
-                    for k, v in pairs(note.metadata) do
-                        out[k] = v
-                    end
-                end
-
-                return out
-            end,
-
-            note_id_func = function(title)
-                return title
-            end,
+            workspaces = {
+                {
+                    name = "vault",
+                    path = "/path/to/vault",
+                },
+            },
         },
-    }
+    },
 
 })
