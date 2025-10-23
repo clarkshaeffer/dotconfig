@@ -95,10 +95,13 @@ require("lazy").setup({
     {
         "obsidian-nvim/obsidian.nvim",
         version = "*", -- recommended, use latest release instead of latest commit
+        lazy = true,
         ft = "markdown",
-        ---@module 'obsidian'
-        ---@type obsidian.config
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+        },
         opts = {
+            legacy_commands = false,
             workspaces = {
                 {
                     name = "vault",
@@ -107,5 +110,6 @@ require("lazy").setup({
             },
         },
     },
+
 
 })
