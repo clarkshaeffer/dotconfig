@@ -1,8 +1,26 @@
 require("lazy").setup({
-	{
-		'nvim-telescope/telescope.nvim', tag = '0.1.6',
-		dependencies = { 'nvim-lua/plenary.nvim' }
-	},
+    {
+        'nvim-telescope/telescope.nvim', version = '*',
+        dependencies = {
+            'nvim-lua/plenary.nvim',
+            -- optional but recommended
+            { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+        }
+    },
+    {
+        'nvim-treesitter/nvim-treesitter',
+        lazy = false,
+        build = ':TSUpdate',
+    },
+
+	-- lsp
+	{'williamboman/mason.nvim'},
+	{'williamboman/mason-lspconfig.nvim'},
+	{'neovim/nvim-lspconfig'},
+	{'hrsh7th/cmp-nvim-lsp'},
+	{'hrsh7th/nvim-cmp'},
+
+    -- color
 	{
 		"folke/tokyonight.nvim",
 		lazy = false,
@@ -19,22 +37,16 @@ require("lazy").setup({
         --     vim.cmd([[colorscheme rose-pine]])
         -- end,
     },
-	{'nvim-treesitter/nvim-treesitter', cmd = 'TSUpdate'},
-	{
-		"ThePrimeagen/harpoon",
-		branch = "harpoon2",
-		dependencies = { "nvim-lua/plenary.nvim" }
-	},
+
+    -- why is harpoon2 not merged??
+    {
+        "ThePrimeagen/harpoon",
+        branch = "harpoon2",
+        dependencies = { "nvim-lua/plenary.nvim" }
+    },
 
 	{'mbbill/undotree'},
 	{'tpope/vim-fugitive'},
-
-	-- lsp
-	{'williamboman/mason.nvim'},
-	{'williamboman/mason-lspconfig.nvim'},
-	{'neovim/nvim-lspconfig'},
-	{'hrsh7th/cmp-nvim-lsp'},
-	{'hrsh7th/nvim-cmp'},
 
     -- surround
     {
@@ -51,19 +63,21 @@ require("lazy").setup({
     -- pencil
     {'preservim/vim-pencil'},
 
-    -- markdown preview
-    {
-      "iamcco/markdown-preview.nvim",
-      cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-      build = "cd app && npm install",
-      init = function()
-        vim.g.mkdp_filetypes = { "markdown" }
-      end,
-      ft = { "markdown" },
-    },
-
     -- Comments
     { 'numToStr/Comment.nvim', opts = {}, lazy = false, },
+
+    -- Obsidian
+    {
+        "obsidian-nvim/obsidian.nvim",
+        version = "*", -- recommended, use latest release instead of latest commit
+        config = false,
+    },
+
+    -- markdown viewer
+    {
+        "jannis-baum/vivify.vim",
+        ft = "markdown",
+    },
 
     -- Animation
     { 'eandrju/cellular-automaton.nvim' },
@@ -74,42 +88,7 @@ require("lazy").setup({
     },
     {
         "sphamba/smear-cursor.nvim",
-        opts = {
-            -- Smear cursor when switching buffers or windows.
-            smear_between_buffers = true,
-
-            -- Smear cursor when moving within line or to neighbor lines.
-            smear_between_neighbor_lines = true,
-
-            -- Draw the smear in buffer space instead of screen space when scrolling
-            scroll_buffer_space = true,
-
-            -- Set to `true` if your font supports legacy computing symbols (block unicode symbols).
-            -- Smears will blend better on all backgrounds.
-            legacy_computing_symbols_support = true,
-        },
+        opts = {},
     },
-
-
-    -- Obsidian
-    {
-        "obsidian-nvim/obsidian.nvim",
-        version = "*", -- recommended, use latest release instead of latest commit
-        lazy = true,
-        ft = "markdown",
-        dependencies = {
-            "nvim-lua/plenary.nvim",
-        },
-        opts = {
-            legacy_commands = false,
-            workspaces = {
-                {
-                    name = "vault",
-                    path = "/path/to/vault",
-                },
-            },
-        },
-    },
-
-
 })
+

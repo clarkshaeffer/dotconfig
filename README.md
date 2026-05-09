@@ -17,7 +17,11 @@ rm -rf ~/.local/state/nvim
 ```
 - get:
     - [`ripgrep`](https://github.com/BurntSushi/ripgrep) (used for `telescope` grep search)
-    - [`tpm`](https://github.com/tmux-plugins/tpm)
+    - [`tpm`](https://github.com/tmux-plugins/tpm) (note: archived)
+    - [`tree-sitter-cli`](https://github.com/tree-sitter/tree-sitter/blob/master/crates/cli/README.md)
+        - via `cargo` or pre-built binary
+        - TODO: needed in container; also it's archived.
+    - optional: [`vivify`](https://github.com/jannis-baum/vivify) for markdown viewer
 - clone -> copy contents to `~/.config/nvim`
 
 and then:
@@ -37,21 +41,29 @@ Python:
 ---
 
 #### Plugins Used
-###### Neovim:
 - [lazy.nvim](https://github.com/folke/lazy.nvim)
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
-- [tokyonight.nvim](https://github.com/folke/tokyonight.nvim) (colorscheme)
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
-- [harpoon](https://github.com/theprimeagen/harpoon)
-- [undotree](https://github.com/mbbill/undotree)
-- [vim-fugitive](https://github.com/tpope/vim-fugitive)
-- [lspconfig](https://github.com/neovim/nvim-lspconfig) 
-    - integrated with [mason.nvim](https://github.com/williamboman/mason.nvim)
-- [nvim-surround](https://github.com/kylechui/nvim-surround)
-- [vim-pencil](https://github.com/preservim/vim-pencil)
-- [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim)
-- [comment.nvim](https://github.com/numToStr/Comment.nvim)
-- [cellular-automaton.nvim](https://github.com/Eandrju/cellular-automaton.nvim) (for fun)
+- lsp stack; includes:
+    - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) 
+    - [mason.nvim](https://github.com/williamboman/mason.nvim)
+- colorschemes
+- [tokyonight.nvim](https://github.com/folke/tokyonight.nvim) (default)
+- [rose-pine/neovim](https://github.com/rose-pine/neovim)
+- nav, syntax
+    - [harpoon](https://github.com/ThePrimeagen/harpoon/tree/harpoon2)
+    - [undotree](https://github.com/mbbill/undotree)
+    - [vim-fugitive](https://github.com/tpope/vim-fugitive)
+    - [nvim-surround](https://github.com/kylechui/nvim-surround)
+    - [vim-closer](https://github.com/rstacruz/vim-closer)
+    - [vim-pencil](https://github.com/preservim/vim-pencil)
+    - [comment.nvim](https://github.com/numToStr/Comment.nvim)
+- markdown
+    - [obsidian.nvim](https://github.com/obsidian-nvim/obsidian.nvim/)
+    - [vivify.vim](https://github.com/jannis-baum/vivify.vim)
+- animation
+    - [cellular-automaton.nvim](https://github.com/Eandrju/cellular-automaton.nvim)
+    - [https://github.com/sphamba/smear-cursor.nvim](https://github.com/sphamba/smear-cursor.nvim)
 
 ---
 
@@ -85,4 +97,3 @@ if on aarch64, install `lua-language-server` with [this command](https://github.
         - `gcl git@github.com:tmux-plugins/tpm.git ~/.tmux/plugins/tpm`
     - `.zshrc` to `.profile`, remove `alias ... >>` stuff
     - Is there a way to open `nvim` automatically??
-
