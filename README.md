@@ -97,3 +97,6 @@ if on aarch64, install `lua-language-server` with [this command](https://github.
         - `gcl git@github.com:tmux-plugins/tpm.git ~/.tmux/plugins/tpm`
     - `.zshrc` to `.profile`, remove `alias ... >>` stuff
     - Is there a way to open `nvim` automatically??
+- `gethomepage` `services.yml`
+- git `update_all.sh`
+- obsidian daily script
