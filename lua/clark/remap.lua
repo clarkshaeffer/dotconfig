@@ -1,5 +1,17 @@
 -- netrw
-vim.keymap.set("n", "<leader><leader>", ":w<CR>:Ex<CR>")
+vim.keymap.set("n", "<leader><leader>", function()
+  vim.cmd.write()
+  local file = vim.fn.expand("%:t")
+  vim.cmd.Ex()
+  local found = vim.fn.search("\\V" .. vim.fn.escape(file, "\\"))
+
+  if found ~= 0 then
+      vim.cmd("normal! zz")
+  else
+      vim.notify("File not found in netrw", vim.log.levels.WARN)
+  end
+end)
+
 vim.keymap.set("n", "<leader>q", vim.cmd.Ex)
 
 -- undotree
