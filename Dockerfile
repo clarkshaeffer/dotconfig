@@ -3,7 +3,7 @@ FROM alpine:latest
 # install dependency libraries
 RUN apk update && apk upgrade && \
     apk add curl git ripgrep neovim tmux \
-    build-base python3 nodejs npm
+    build-base python3 nodejs npm tree-sitter-cli
 
 # other packages:
 # openjdk11
@@ -12,7 +12,9 @@ RUN apk update && apk upgrade && \
 WORKDIR /root
 
 # get source
-RUN git clone https://github.com/clarkshaeffer/dotconfig.git
+# RUN git clone https://github.com/clarkshaeffer/dotconfig.git
+RUN mkdir -p dotconfig
+COPY . dotconfig
 
 # copy source
 RUN mkdir -p .config/nvim && cp -r dotconfig/* .config/nvim
